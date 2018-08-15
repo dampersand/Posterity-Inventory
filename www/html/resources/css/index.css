@@ -1,0 +1,80 @@
+html, body {
+  font-family: "adelle-sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #232323;
+  margin:0;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+#header {
+  border-bottom: #232323 2px solid;
+  position: static;
+  overflow: visible;
+  background-color: #F3F3F3;
+}
+
+#innerheader {
+	display:flex;
+  flex-direction: row-reverse;
+  padding:0 1em;
+  align-items:center;
+
+}
+
+#location {
+	order:1;
+}
+
+#logo {
+	order:0;
+}
+
+.growspacer {
+	flex-grow:1;
+	order:2;
+}
+
+#main {
+  padding:1em 1em;
+  background: url(../img/pattern.gif) repeat 0 0;
+  flex-grow:1;
+
+}
+
+/*remove margins, bullet points, padding*/
+ul.topnav {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  order:3;
+}
+
+/*float all items left*/
+ul.topnav li {
+  float:left;
+}
+
+/*general stylizing of button/links*/
+ul.topnav li a {
+  display: inline-block;
+  text-align:center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #232323;
+  cursor:default;
+}
+
+/*create background color on hover*/
+ul.topnav li a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+footer {
+  padding: 40px 0;
+  background: #232323;
+}

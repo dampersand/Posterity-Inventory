@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/index.css">
+    <meta charset="utf-8">
+    <title>Inventory Greeter</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+  		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"
+   	    integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE="
+	    crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+	    crossorigin="anonymous">
+    </script>
+    <script src="resources/js/jquery.inputmask.bundle.js"></script>
+    <script src="resources/js/location.js"></script>
+    <script src="resources/js/index.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="innerheader">
+            <ul class="topnav" id="mainMenu">
+              <li><a id="inventoryFrontend">Inventory Frontend</a></li>
+              <li><a id="adminFrontend">Admin Frontend</a></li>
+              <li><a id="reporter">Reporter</a></li>
+              <li><a id="auditor">Auditor</a></li>
+              <li><a id="hud">HUD</a></li>
+            </ul>
+            <div class=growspacer></div>
+            <select id="location">
+                <option value="LAX1">LAX1</option>
+                <option value="IAD1">IAD1</option>
+                <option value="IAD2">IAD2</option>
+            </select>
+            <img id="logo" src="resources/img/logo-imh.svg" alt="InMotion Hosting" height="34">
+        </div>
+    </div>
+
+    <div id="main">
+    </div>
+    <footer class="foot">
+    </footer>
+</body>

@@ -1,0 +1,160 @@
+/*
+TO DO
+move away from pixels and vw and use em and rem
+restructure this entire damn page
+*/
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 1.05vw;
+  line-height: 1.5vw;
+  font-weight: 400;
+  color: #3b3b3b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  background: #000000;
+}
+
+#columnWrapper {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	align-items:flex-start;
+}
+
+.column {
+	margin-left: 1rem;
+}
+
+#left {
+	order:1;
+}
+
+#center {
+	order:2;
+	flex-grow:1;
+}
+
+#right {
+	order:3;
+	display:flex;
+	flex-direction:column;
+	flex-basis:10vw;
+}
+
+.widget {
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  flex-basis:12vw;
+  margin-top:1vw;
+}
+
+.widgetText {
+  line-height: 3.0vw;
+  font-size: 3.0vw;
+  color: #ffffff;
+  margin:auto;
+}
+
+#clock {
+  background-image:url(../img/clock.png);
+}
+
+#calendar {
+  background-image:url(../img/calendar.png);
+}
+
+#oncall {
+  background-image:url(../img/phone.png);
+  display:table;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:2vw;
+  padding-bottom:2vw;
+}
+
+#oncallnow, #oncallnext, #oncalltitle, #oncallnetops {
+	display:table-row;
+}
+
+#oncallnowleft, #oncallnextleft, #oncallnowright, #oncallnextright, #oncalltitleleft, #oncalltitleright, #oncallnetopsleft, #oncallnetopsright {
+	display:table-cell;
+	font-size:2vw;
+}
+
+#oncallnowleft, #oncallnextleft, #oncalltitleleft, #oncallnetopsleft {
+	text-align:right;
+}
+
+#oncallnowright, #oncallnextright, #oncalltitleright, #oncallnetopsright {
+	text-align:left;
+}
+
+#nonrevenue {
+  background-image:url(../img/dollar.png);
+  text-align:center;
+}
+
+#nonRevenueTitle {
+	font-size:1.8vw;
+	line-height:2vw;
+}
+
+.table {
+  margin: 0 0 2.3vw 0;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: table;
+}
+@media screen and (max-width: 580px) {
+  .table {
+    display: block;
+  }
+}
+
+.row {
+  display: table-row;
+  background: #595959;
+  color: #ffffff;
+}
+.row:nth-of-type(odd) {
+  background: #242424;
+}
+.row.header {
+  font-weight: 900;
+  color: #ffffff;
+  background: #ea6153;
+}
+.row.green {
+  background: #27ae60;
+}
+.row.blue {
+  background: #2980b9;
+}
+.row.purple {
+  background: #a647dc;
+}
+@media screen and (max-width: 580px) {
+  .row {
+    padding: 8px 0;
+    display: block;
+  }
+}
+
+.cell {
+  padding: 6px 6px;
+  display: table-cell;
+  white-space: nowrap;
+  max-width: 19vw;
+  overflow:hidden;
+}
+@media screen and (max-width: 580px) {
+  .cell {
+    padding: 2px 12px;
+    display: block;
+  }
+}
+

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css">
+    <link id="inventoryStyle" rel="stylesheet" type="text/css" href="resources/css/inventory.css">
+    <meta charset="utf-8">
+    <title>Inventory Barcode Frontend</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+                integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+                crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous">
+    </script>
+    <script src="resources/js/location.js"></script>
+    <script src="resources/js/inventory.js"></script>
+    
+</head>
+
+<body>
+  <div class="header" id="header">
+    <div id="themeAndTitle">
+      <h4>Inventory Update</h4>
+      <div id="themeButtons">
+        <button id="light" class="theme down">Light</button>
+        <button id="dark" class="theme">Dark</button>
+      </div>
+    </div>
+    <div id="topInfo">
+      <button class="regular" type="login" id="login">Login</button>
+      <button class="regular" type="login" id="toAuditor">Switch To Auditor</button>
+      <div class="hide" id="credentials">
+        <input class="auth" name="userName" id="userName" type="text" placeholder="User Name" autocapitalize="none">
+        <br>
+        <input class="auth" name="password" id="password" type="password" placeholder="Password">
+      </div>
+      <button class="regular hide" type="login" id="go">Go!</button>
+      <button class="regular hide" type="login" id="forgot">Forgot Password!</button>
+      <button class="regular hide" type="login" id="restart">Restart</button>
+      <button class="regular hide" type="login" id="submit">Submit</button>
+    </div>
+    <div id="spinContainer" class="hide">
+    	<div class="spinner"></div>
+    </div>
+    <div id="logoContainer">
+      <img id="logo" src="resources/img/logo-imh.svg" alt="InMotion Hosting" height="64">
+    </div>
+  </div>
+
+  <div id="main">
+    <div id="itemBox">
+      <div class="hide" id="flowStart">
+        <button class="regular" id="new">New Items</button>
+        <div id="flowStartSpacer"></div>
+        <button class="regular" id="existing">Existing Items</button>
+      </div>
+      <div class="item existingItem remove">
+        <button class="disabled exBox">X</button>
+        <button class="disabled globalOn">Global</button>
+        <div class="itemInputContainer">
+          <input class="itemSerial" type="text" placeholder="Serial">
+          <input class="itemNote" type="text" placeholder="Note">
+        </div>
+        <div class="itemInfo">
+          <div class="itemInfoTop"></div>
+          <div class="itemInfoBottom"></div>
+        </div>
+        <div class="statusContainerOuter">
+          <table class="statusContainerInner">
+            <tr>
+              <td><button class="toggle Ready">Ready</button></td>
+              <td><button class="toggle RMA">RMA</button></td>
+            </tr>
+            <tr>
+              <td><button class="toggle Used">Used</button></td>
+              <td><button class="toggle Test">Test</button></td>
+            </tr>
+          </table>
+          <button class="toggle Dead">Dead</button>
+        </div>
+      </div>
+
+      <div class="item newItem remove">
+        <button class="disabled exBox">X</button>
+        <button class="disabled globalOn">Global</button>
+        <input class="itemSerial" type="text" placeholder="Serial">
+        <div class="growSpacer"></div>
+        <input class="itemKeyword" type="text" placeholder="Keyword">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog hide" id="continueAlert">
+    <p>Make another transaction?</p>
+  </div>
+
+
+  <footer>
+  </footer>
+</body>
+</html>

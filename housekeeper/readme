@@ -1,0 +1,24 @@
+A python and a shell script to keep the elasticsearch DB up to date.
+
+The python script is run on the hour, and its job is to update item amounts, check for items beneath threshold, check tracking numbers, check for new tickets for the HUD, update tracking windows, update ticket windows, send out emails for problems, etc.
+
+The shell script should be run once per year (on the first of january, ASAP) in order to update indices.  It adds any missing indices (and since some indices are named by years, those indices need remade every year) and then correctly adds their key templates
+
+This folder (housekeeper) should exist in /opt/inventory/ such that you have:
+
+/opt/inventory/housekeeper/housekeeper.py
+/opt/inventory/housekeeper/templatemaker.py
+
+
+CHANGELOG
+added minikeeper
+changed a few things in 'users' table of templatemaker.sh
+added 'indices' to templatemaker.sh
+
+3.11
+added 'ordered' flag to items database
+added housekeeper adding/processing 'ordered' flag
+
+3.3
+added 'location' flag to serials database
+changed usage of amount/thresholds.  Major overhaul to allow future datacenters.

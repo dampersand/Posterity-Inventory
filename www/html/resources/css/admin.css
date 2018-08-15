@@ -1,0 +1,337 @@
+html, body {
+  font-family: "adelle-sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #232323;
+  margin:0;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+/*mozilla and chrome specific appearance types*/
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.outertopnav {
+  border-bottom: #232323 2px solid;
+  position: static;
+  width: 100%;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow: visible;
+  background-color: #F3F3F3;
+}
+
+.innertopnav {
+  min-height: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  align-items: center;
+}
+
+/*remove margins, bullet points, padding*/
+ul.topnav {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+}
+
+/*float all items left*/
+ul.topnav li {
+  float:left;
+}
+
+/*general stylizing of button/links*/
+ul.topnav li a {
+  display: inline-block;
+  text-align:center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #232323;
+  cursor:default;
+}
+
+#spinContainer {
+  vertical-align:middle;
+  padding-left:1rem;
+}
+
+.spinner {
+  border: 0.5em solid #cccccc;
+  border-bottom: 0.5em solid #3498db; /* blue */
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.growspacer {
+  flex-grow:1;
+}
+
+#innerserialtablecontainer, #historytablecontainer {
+  display:none;
+  padding: 5px 20px;
+  position:relative;
+}
+
+.ui-dialog {
+  font-family: "adelle-sans", Helvetica, Arial, sans-serif !important;
+  border: 2px solid black !important;
+}
+
+.no-close .ui-dialog-titlebar-close {
+  display: none 
+}
+
+.centeredDialog {
+  display:flex;
+  flex-direction:column;
+}
+
+/*create background color on hover*/
+ul.topnav li a:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/*pagesize stuff*/
+#pagesize {
+  width: 2.5em;
+  text-align:center;
+}
+
+
+/*main and mainwindow locations*/
+#main {
+  padding:20px 20px;
+  background: url(../img/pattern.gif) repeat 0 0;
+  flex-grow:1;
+}
+
+/*pagenav stuff*/
+.currentpage {
+  width: 2.5em;
+  text-align: center;
+}
+
+.pagenav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+/*icons*/
+.icon {
+  display: inline-block;
+  line-height:1;
+  position:relative;
+}
+
+.icon::before {
+  display: inline-block;
+  background-size: 20px 20px;
+  width:20px;
+  height: 20px;
+  content:"";
+}
+
+.table-add {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.table-remove {
+  cursor: pointer;
+}
+
+.table-expand {
+  cursor: pointer;
+}
+
+.table-remove-true {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.table-save {
+  cursor: pointer;
+}
+
+.table-qc {
+  cursor: pointer;
+}
+
+.table-email {
+  cursor: pointer;
+}
+
+.table-history {
+  cursor: pointer;
+}
+
+.icon-first::before {
+  background-image: url(../img/double-left-arrow.png);
+}
+
+.icon-first {
+  cursor: pointer;
+}
+
+.icon-prev::before {
+  background-image: url(../img/left-arrow.png);
+}
+
+.icon-prev {
+  cursor: pointer;
+}
+
+.icon-next::before {
+  background-image: url(../img/right-arrow.png);
+}
+
+.icon-next {
+  cursor: pointer;
+}
+
+.icon-last::before {
+  background-image: url(../img/double-right-arrow.png);
+}
+
+.icon-last {
+  cursor: pointer;
+}
+
+.icon-add::before {
+  background-image: url(../img/plus.png);
+  margin-left:-41px;
+  margin-top:-9px;
+}
+.icon-multiadd::before {
+  background-image: url(../img/multiplus.png);
+  margin-left: -62px;
+  margin-top: -9px;
+}
+
+.icon-remove::before {
+  background-image: url(../img/trash.png);
+}
+
+.icon-remove-true::before {
+  background-image: url(../img/yes.png);
+}
+
+.icon-save::before {
+  background-image: url(../img/save.png);
+}
+
+.icon-qc::before {
+  background-image: url(../img/edit.svg);
+}
+
+.icon-expand::before {
+  background-image: url(../img/qricon.jpg);
+}
+
+.icon-history::before {
+  background-image: url(../img/history.png);
+}
+
+.icon-email::before {
+  background-image: url(../img/envelope.png);
+}
+
+.icon-nonotes::before {
+  background-image: url(../img/stickynoteoff.png);
+}
+
+.icon-yesnotes::before {
+  background-image: url(../img/stickynoteon.png);
+}
+
+.shrink {
+  width:0.1%;
+  white-space: nowrap;
+  padding-right:1em;
+  text-align:center;
+}
+
+/*building out the table*/
+.table-editable {
+  position:relative;
+  border: #232323 2px solid;
+  background-color: #FFFFFF;
+  padding: 5px 20px;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  width: 100% !important;
+}
+
+th {
+  text-align:left;
+  cursor:default;
+}
+
+th:not(.nohover):hover {
+  background-color:#F37878;
+}
+
+tr {
+  border-top: 1px solid #E1E1E1;
+}
+
+tr.header {
+  border-top: 0px;
+  border-bottom: 1px solid black;
+}
+
+td:not(.nohover):hover {
+  background-color:#F3F3F3;
+  cursor:default;
+}
+
+.trashsave {
+  text-align:right;
+}
+
+.trashsave:hover {
+  background-color:#FFFFFF;
+}
+
+.selectcell {
+  width:10%;
+}
+
+#multicarrier {
+  width:4em;
+  text-align:center;
+}
+
+#multinums {
+  width:20em;
+}
+
+footer {
+  padding: 40px 0;
+  background: #232323;
+}

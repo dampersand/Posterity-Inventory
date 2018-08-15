@@ -1,0 +1,140 @@
+html, body {
+  font-family: "adelle-sans", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #232323;
+  margin:0;
+}
+
+#outertop {
+  border-bottom: #232323 2px solid;
+  width: 100%;
+  overflow: visible;
+  background-color: #F3F3F3;
+  display:flex;
+}
+
+h4 {
+  color: #232323;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  padding-left: 0.5em;
+  margin: 0.5em;
+}
+
+h5 {
+  color: #232323;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin: 0 0 0.5em 0;
+  border-bottom: 2px solid black;
+}
+
+.growSpacer {
+  flex-grow: 1;
+}
+
+#logo {
+  padding-right: 0.5em;
+  align-self: center;
+}
+
+#main {
+  padding:20px 20px;
+  background: url(../img/pattern.gif) repeat 0 0;
+}
+
+#tablecontainer {
+  position:relative;
+  border: #232323 2px solid;
+  background-color: #FFFFFF;
+  padding: 5px 20px;
+}
+
+#filterbox {
+  display:flex;
+  margin-bottom:1em;
+}
+
+#datefilter {
+  display:flex;
+  flex-direction:column;
+}
+
+.datewrapper {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+#spinContainer {
+  align-self:center;
+  padding-left:1rem;
+}
+
+.spinner {
+  border: 0.5em solid #cccccc;
+  border-bottom: 0.5em solid #3498db; /* blue */
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#reporttable {
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  width: 100% !important;
+}
+
+#popuptable {
+  display:none;
+  padding: 5px 20px;
+  position:relative;
+}
+
+#flexcontainer {
+  display:flex;
+  justify-content:space-around;
+}
+
+.maincolumn {
+  display:flex;
+  flex-direction:column;
+}
+
+.columnhost {
+  display:flex;
+  flex-direction:row;
+}
+
+.column {
+  display:flex;
+  flex-direction:column;
+  margin-right: 1em;
+}
+
+th {
+  text-align:left;
+  cursor:default;
+}
+
+tr {
+  border-top: 1px solid #E1E1E1;
+}
+
+tr.header {
+  border-top: 0px;
+  border-bottom: 1px solid black;
+}
+
+footer {
+  padding: 40px 0;
+  background: #232323;
+}

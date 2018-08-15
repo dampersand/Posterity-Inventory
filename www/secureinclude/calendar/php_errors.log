@@ -1,0 +1,7 @@
+[10-Jun-2016 14:43:44 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'file does not exist' in /var/www/html/calendar/vendor/google/apiclient/src/Google/Client.php:839
+Stack trace:
+#0 /var/www/html/calendar/vendor/google/apiclient/src/Google/Client.php(824): Google_Client->setAuthConfig('/var/www/html/c...')
+#1 /var/www/html/calendar/calendar.php(26): Google_Client->setAuthConfigFile('/var/www/html/c...')
+#2 /var/www/html/calendar/calendar.php(73): getClient()
+#3 {main}
+  thrown in /var/www/html/calendar/vendor/google/apiclient/src/Google/Client.php on line 839

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css">
+    <link id="inventoryStyle" rel="stylesheet" type="text/css" href="resources/css/auditor.css">
+    <meta charset="utf-8">
+    <title>Inventory Auditor</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+                integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+                crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous">
+    </script>
+    <script src="resources/js/location.js"></script>
+    <script src="resources/js/auditor.js"></script>
+    
+</head>
+
+<body>
+  <div class="header" id="header">
+    <div id="themeAndTitle">
+      <h4>Inventory Audit</h4>
+      <div id="themeButtons">
+        <button id="light" class="theme down">Light</button>
+        <button id="dark" class="theme">Dark</button>
+      </div>
+    </div>
+    <div id="topInfo">
+      <button class="regular" type="login" id="login">Login</button>
+      <button class="regular" type="login" id="toInventory">Switch To Inventory</button>
+      <div class="hide" id="credentials">
+        <input class="auth" name="userName" id="userName" type="text" placeholder="User Name" autocapitalize="none">
+        <br>
+        <input class="auth" name="password" id="password" type="password" placeholder="Password">
+      </div>
+      <button class="regular hide" type="login" id="go">Go!</button>
+      <button class="regular hide" type="login" id="forgot">Forgot Password!</button>
+      <button class="regular hide" type="login" id="restart">Restart</button>
+      <button class="regular hide" type="login" id="submit">Submit</button>
+    </div>
+    <div id="spinContainer" class="hide">
+    	<div class="spinner"></div>
+    </div>
+    <div id="logoContainer">
+      <img id="logo" src="resources/img/logo-imh.svg" alt="InMotion Hosting" height="64">
+    </div>
+  </div>
+
+  <div id="main">
+    <div id="itemBox">
+      <div class="remove itemHeader">
+        <div class="itemKeyword">Keyword</div>
+        <div class="itemInfo">
+          <div class="itemInfoTop">Last Audit: Placeholder</div>
+          <div class="itemInfoBottom">By: Placeholder</div>
+        </div>
+        <input class="itemSerialInput" type="text" size="10" placeholder="Enter Serial">
+        <button class="disabled startAudit">Audit!</button>
+      </div>
+      <div class="remove subMenu readies">
+        <div style="font-size:2em;">Serials in Ready</div>
+        <table>
+          <tr>
+            <td class="notFound">10000110</td>
+          </tr>
+        </table>
+      </div>
+      <div class="remove subMenu problems">
+        <div style="font-size:2em;">Problems</div>
+        <div class="badItem">
+          <button class="disabled exBox">X</button>
+          <div class="itemSerial">145311</div>
+          <div class="status">lololol</div>
+        </div>
+      </div>
+      <div class="remove auditSpacer"></div>
+
+    </div>
+  </div>
+
+  <div class="dialog hide" id="doubleCheckAlert">
+    <p>If you submit your audit as-is, all unfound serials will be converted to 'Unknown' and problem serials will be converted to 'Ready.'</p>
+    <p>Additionally, all problem serials will have their keywords force-set to the keyword they were audited under.</p>
+    <p>Continue?</p>
+  </div>
+
+  <footer>
+  </footer>
+</body>
+</html>

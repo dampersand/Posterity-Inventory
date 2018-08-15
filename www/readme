@@ -1,0 +1,54 @@
+This folder contains tons of stuff.  The folder (www) should be merged with your /var/ folder, and httpd.conf or whatever you're using should be set up to point to inventory.html, admin.php, and hud.html accordingly
+
+This project contains the HTML/css/js frontend, the php backend, images/resources etc, and all the secureinclude files.
+
+CHANGELOG:
+3.05
+
+Made flurry of initial updates to inventory system:
+added themes
+added animations
+changed colors
+added 'forgot password' functionality
+rewrote auth to accept password keys
+added pwdreset backend (project now requires a refactor)
+fixed some locking buttons
+added serial checking from frontend to prevent duplicate serials
+added 'restart' button to start over
+added ability to stay logged in after a transaction
+and more!  probably.  I can't remember all of it.
+
+
+3.1
+Added ability to track toasters
+Added serial admin frontend
+Rewrote auth to allow cookies to individual users
+Rewrote auth to create expiry for cookies
+Rewrote admin page to redirect on failed auth
+Added Reporter (!!)
+
+3.11
+Updated admin frontend to ignore spaces in tracking numbers
+Updated hud and admin to allow users to set 'ordered' flag, which will turn hud thresholdTable rows green.
+Added a 'loading' animation to reporter
+Disabled multiclicking the 'generate' button in reporter to prevent search overload
+Added 3 minute timeout to the inventory 'more transactions' dialog
+Fixed contenteditable highlighting in chrome
+
+3.12
+Updated calendar.php
+Updated php api to work with elasticsearch 5.x
+Updated auth to work with elasticsearch 5.x
+Updated reporter.js to work with elasticsearch 5.x
+
+3.2
+Added auditor.html RC1
+Updated admin, inventory to work with audit information
+
+3.3
+Added framework for EC stuff
+Includes massive changes to the way amounts/thresholds work, how all the data is read.  Affects auditor, inventory, admin, hud, and the api.  Probably breaks reporter.
+
+3.35
+Created and implemented bettersort in admin.php/admin.js/admin.css
+Stuff is getting very hacky.  It might be wise to refactor admin.js shortly.
